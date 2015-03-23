@@ -1,0 +1,21 @@
+{
+    // an array of options to pass to jslint.
+    "options" : [
+
+        // strict whitespace rules should be ignored
+         "--white"
+
+        // the Rhino environment globals should be predefined
+        ,"--rhino"
+
+        // . and [^...] should be allowed in RegExp literals
+        ,"--regexp"
+
+        //  the continue statement should be allowed
+        ,"--continue"
+
+        // warnings should not be given for unused parameters
+        ,"--unparam"
+
+    ]
+}

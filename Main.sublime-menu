@@ -1,0 +1,63 @@
+[
+  {
+    "id": "tools",
+    "children": [
+      {
+        "caption": "Start Tomcat (y)",
+        "id" : "tomcat_start",
+        "command" : "exec",
+        "mnemonic": "y",
+        "args" : {
+          "cmd" : [ "catalina.bat", "start" ],
+          "working_dir" : "C:/Apps/Tomcat-6.0.32-HEAD/bin",
+          "env" : {
+            "CATALINA_HOME" : "C:/Apps/Tomcat-6.0.32-HEAD",
+            "CATALINA_OPTS" : ""
+          }
+        }
+      },
+      {
+        "caption": "Stop Tomcat (z)",
+        "id" : "tomcat_stop",
+        "command" : "exec",
+        "mnemonic": "z",
+        "args" : {
+          "cmd" : [ "catalina.bat", "stop" ],
+          "working_dir" : "C:/Apps/Tomcat-6.0.32-HEAD/bin",
+          "env" : {
+            "CATALINA_HOME" : "C:/Apps/Tomcat-6.0.32-HEAD",
+            "CATALINA_OPTS" : ""
+          }
+        }
+      },
+      {
+        "caption": "Validate Document",
+        "mnemonic": "d",
+        "id": "statv",
+        "command": "statv"
+      },
+      {
+        "command": "repl_open", 
+        "caption": "Rhino",
+        "id": "repl_rhino",
+        "mnemonic": "h",
+        "args":
+          {
+          "type": "subprocess",
+          "encoding": "utf8",
+          "cmd": {"windows": ["java.exe", "-Dfile.encoding=UTF-8", "-Xmx500M", "-classpath",
+                      "WEB-INF/lib/rsl_local.jar;../rsl_app/java/other/rsl_shared.jar;../rsl_app/java/other/tika-app-1.5.jar;../rsl_app/java/endorsed/*",
+                      "org.mozilla.javascript.tools.shell.Main", "-opt", "-1"],
+                  "linux": ["java", "repl"],
+                  "osx":  ["java", "repl"]},
+          "soft_quit": "\nquit()\n",
+          "cwd": {"windows":"$file_path",
+                  "linux": "$file_path",
+                  "osx": "$file_path"},
+          "syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+          "external_id": "${file_path}"
+          }
+      }
+    ]
+  }
+]

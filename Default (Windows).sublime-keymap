@@ -1,0 +1,4 @@
+[
+	{ "keys": ["alt+a"], "command": "tomcat_start" },
+	{ "keys": ["alt+z"], "command": "tomcat_stop" }
+]

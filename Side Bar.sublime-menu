@@ -1,0 +1,27 @@
+[
+  {
+    "caption": "Validate Documents",
+    "command": "statv_exec",
+    "args": {
+      "paths": []
+    }
+  },
+  {
+    "caption": "CVS update",
+    "command": "rsl_cvs",
+    "args": {
+      "cvs_args" : [ "-q", "upd", "-Pd"],
+      "paths": []
+
+    }
+  },
+  {
+    "caption": "CVS commit",
+    "command": "rsl_cvs",
+    "args": {
+      "cvs_args" : [ "commit"],
+      "paths": []
+
+    }
+  }
+]

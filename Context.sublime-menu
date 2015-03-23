@@ -1,0 +1,4 @@
+[
+    { "command": "statv", "caption": "Validate Documents" },
+    { "command" : "cvs_upd", "caption" : "cvs update" }
+]
