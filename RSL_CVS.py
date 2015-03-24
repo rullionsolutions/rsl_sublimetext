@@ -5,7 +5,7 @@ import sublime_plugin
 import re
 import os
 
-SETTINGS_FILE = 'StevieCvs.sublime-settings'
+SETTINGS_FILE = 'RslCvs.sublime-settings'
 
 class Rsl_CvsCommand(sublime_plugin.WindowCommand):
 

@@ -25,7 +25,7 @@ class StatvExecCommand(sublime_plugin.WindowCommand):
 #		self.window.run_command('append', { 'characters': paths[0] })
 		self.window.run_command('exec', {
 			'cmd':
-				list(map(os.path.expanduser, settings.get('statv', ['node', sublime.packages_path() + '/User/statement_validator.js']))) +
+				list(map(os.path.expanduser, settings.get('statv', ['node', sublime.packages_path() + '/RSL/statement_validator.js']))) +
 				settings.get('options', []) +
 				files,
 			'path': path,

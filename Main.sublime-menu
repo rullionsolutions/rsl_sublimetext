@@ -41,15 +41,15 @@
         "caption": "Rhino",
         "id": "repl_rhino",
         "mnemonic": "h",
-        "args":
-          {
+        "args": {
           "type": "subprocess",
           "encoding": "utf8",
           "cmd": {"windows": ["java.exe", "-Dfile.encoding=UTF-8", "-Xmx500M", "-classpath",
                       "WEB-INF/lib/rsl_local.jar;../rsl_app/java/other/rsl_shared.jar;../rsl_app/java/other/tika-app-1.5.jar;../rsl_app/java/endorsed/*",
                       "org.mozilla.javascript.tools.shell.Main", "-opt", "-1"],
                   "linux": ["java", "repl"],
-                  "osx":  ["java", "repl"]},
+                  "osx":  ["java", "repl"]
+          },
           "soft_quit": "\nquit()\n",
           "cwd": {"windows":"$file_path",
                   "linux": "$file_path",
@@ -57,6 +57,22 @@
           "syntax": "Packages/JavaScript/JavaScript.tmLanguage",
           "external_id": "${file_path}"
           }
+      },
+      {
+        "id"     : "compile_cli_side",
+        "caption": "Compile Client-Side JavaScript",
+        "command": "exec",
+        "args"   : {
+          "encoding": "utf8",
+          "working_dir"     : "C:/Apps/ecl_wkspc-HEAD/env_ui_devt/style/",
+          "cmd"     : {
+            "windows"  : [
+              "java.exe", "-jar", "${packages}/RSL/GoogleClosureCompiler/compiler.jar", "--js",
+              "master_refactor.js", "log.js", "container.js", "login.js", "ping.js",
+              "--js_output_file", "compiled.js"
+            ]
+          }
+        }
       }
     ]
   }
