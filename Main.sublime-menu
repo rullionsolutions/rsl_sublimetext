@@ -1,6 +1,7 @@
 [
   {
-    "id": "tools",
+    "id": "rsl",
+    "caption": "RSL Tools",
     "children": [
       {
         "caption": "Start Tomcat (y)",
