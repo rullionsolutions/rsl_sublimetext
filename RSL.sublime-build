@@ -1,0 +1,8 @@
+{
+//	"caption": "Run (N)odeunit Test (BuildSys)",
+//	"id" : "nodeunit",
+	"cmd" : [ "nodeunit.cmd" ],
+	"working_dir" : "C:/Apps/node_modules/rsl_lib/base/",
+//	"target": "ansi_color_build",
+	"syntax": "Packages/ANSIescape/ANSI.tmLanguage"
+}
